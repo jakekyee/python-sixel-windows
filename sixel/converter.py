@@ -1,10 +1,13 @@
 # -*- coding: utf-8 -*-
 # Copyright 2012-2014 Hayaki Saito <user@zuse.jp>
 # Copyright 2023 Lubosz Sarnecki <lubosz@gmail.com>
+# Modified 2025 Jacob Yee <jakeyee@jakeyee.com>
 # SPDX-License-Identifier: GPL-3.0-or-later
 
 from io import StringIO
+# from PIL import Image
 from PIL import Image
+
 
 
 class SixelConverter:
@@ -36,8 +39,13 @@ class SixelConverter:
             self.ST = '\x1b\\'
 
         image = Image.open(file)
+        # image = image.convert("RGB").convert("P",
+        #                                      palette=Image.Palette.ADAPTIVE,
+        #                                      colors=ncolor)
+
+
         image = image.convert("RGB").convert("P",
-                                             palette=Image.Palette.ADAPTIVE,
+                                             palette=Image.ADAPTIVE,
                                              colors=ncolor)
         if w or h:
             width, height = image.size
