@@ -2,7 +2,7 @@
 
 Display images in the terminal using [Sixel](https://en.wikipedia.org/wiki/Sixel).
 
-This is a fork of the no longer maintained [PySixel](https://github.com/saitoha/PySixel).
+This is a fork of [PySixel](https://github.com/lubosz/python-sixel) to add windows compatibility.
 
 Check [arewesixelyet.com](https://www.arewesixelyet.com/) for supported terminals.
 
